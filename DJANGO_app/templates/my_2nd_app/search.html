@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 style="text-align: center">{{ search | title }}</h2>
+<div class="container">
+    <div class="row">
+    {% for posts in final_posts %}
+
+    <div class="row">
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image">
+                <a href=""><img src="https://www.hdwallpapers.in/download/iron_man_low_poly_art_4k-HD.jpg" alt="/"></a>
+            </div>
+            <div class="card-content">
+                <p>{{ posts.0 }}</p>
+            </div>
+            <div class="card-action">
+                <a href="{{ posts.1 }}">{{ posts.2 }}</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+    </div>
+
+{% endblock content %}
+
